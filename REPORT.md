@@ -110,10 +110,10 @@
 - **Cost figures are assumptions.** The 5,000 EUR, 5% base rate and 1.5 EUR are not measured. With more time I would take real incident and fine data from a site and measure the true violation rate at the gate.
 - **Data mismatch with a real gate.** The photos are not from a gate camera, so lighting, distance and angle differ. I would test on a few days of real footage before trusting any cost figure.
 - **Privacy.** A gate camera records workers' faces, which in the EU falls under data protection rules (GDPR). A real deployment would need a legal basis, a retention limit, and probably to store only the decision, not the images.
+- **Thresholds chosen on the test set.** I picked the thresholds by minimising cost on the same 50 test images that I use to report the cost, so the 32,632 EUR is optimistic. With more time I would choose them on the validation split and report on test only once.
 
 ## Generative AI use disclosure
 
 I used Claude (Anthropic) as an assistant. First, I trained a model on a different dataset that did not have the right classes, and Claude helped me see what I was doing wrong, so I changed the entire project.
 It helped me debug the pipeline, write and correct the code for `train.py`, `app.py` and `costing.py`, and structure this report from my own results.
-I chose the problem and the cost assumptions, downloaded the dataset, ran the training on my own laptop, and checked the dashboard locally.
-All model results in this report come from my own run. A few figures (the 250,000 EUR and 1,500 EUR baselines, the break-even points, the Wilson interval and the object size in pixels) are my own calculations from those results.
+I chose the problem and the cost assumptions (5,000 EUR, 5 EUR, 5% base rate), downloaded the dataset, ran the training on my own laptop, and checked the dashboard locally. All model results in this report come from my own run. Claude also suggested the human-review cost and staffing defaults (1.5 EUR per review, 2 minutes, 6.5 productive hours), which I reviewed and kept.
