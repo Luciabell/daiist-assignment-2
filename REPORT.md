@@ -33,7 +33,7 @@
 - **Split sizes** : train 1,602 images, validation 149, test 50. The test split is only about 2.8% of the data.
 - **Instances per class** :
 
-|| Split | `head` | `helmet` | `person` |
+| Split | `head` | `helmet` | `person` |
 | :--- | :---: | :---: | :---: |
 | Train | 2,633 | 8,286 | 299 |
 | Validation | 103 | 593 | 9 |
